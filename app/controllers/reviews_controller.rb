@@ -5,6 +5,19 @@ class ReviewsController < ApplicationController
     reviews.to_json
   end
 
+  post '/reviews' do
+    review = Review.create(
+      comment: params[:comment],
+      rating: params[:rating],
+      movie_id: params[:movie_id]
+      show_id: params[:show_id]
+      user_id: params[:user_id]
+    )
+    review.to_json
+  end
+
+
+
   delete "/reviews/:id" do
     review = Review.find(params[:id])
     review.destroy
@@ -40,7 +53,7 @@ end
 #handle submit to update reviews for movie
 # function EditReviewForm({ review, onUpdateReview }) {
 #   const [comment, setComment] = useState("");
-#   const [rating, setRating] = useState("0");
+#   const [rating, setRating] = useState(0);
 
 #   function handleSubmit(e) {
 #     e.preventDefault();
