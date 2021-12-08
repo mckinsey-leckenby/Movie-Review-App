@@ -1,5 +1,6 @@
 require 'csv'
 puts "🌱 Seeding spices..."
+puts "seeding movies..."
 
 csv_text = File.read('lib/seeds/movie_lists_movies.csv')
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
@@ -14,7 +15,7 @@ csv.each do |t|
           rating: t['rating']
         })
 end
-
+puts "seeding shows..."
 shows = File.read('lib/seeds/show_lists_tv_shows.csv')
 csv = CSV.parse(shows, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |t|
@@ -30,20 +31,22 @@ csv.each do |t|
           rating:t['rating']
         })
 end
-
+puts "seeding users..."
 40.times do
     User.create(full_name: Faker::Name.name)
 end
-
-20.times do 
-    Review.create(comment: Faker::Lorem.sentence(word_count: 8), rating: rand(1..10), show_id: Show.all.sample.id, user_id: User.all.sample.id)
+puts "seeding movie/show reviews"
+User.all.each do |t|
+    rand(1..5).times do 
+        Review.create(comment: Faker::Lorem.sentence(word_count: 8), rating: rand(1..10), movie_id: Movie.all.sample.id, user_id: t.id)
+        Review.create(comment: Faker::Lorem.sentence(word_count: 8), rating: rand(1..10), show_id: Show.all.sample.id, user_id: t.id)
+    end
 end
-
-Review.create(comment: Faker::Lorem.sentence(word_count: 8), rating: rand(1..10), show_id: Show.first.id, user_id: User.first.id)
-
-20.times do 
-    Review.create(comment: Faker::Lorem.sentence(word_count: 8), rating: rand(1..10), movie_id: Show.all.sample.id, user_id: User.all.sample.id)
-end
+# puts "seeding show reviews"
+# User.all.each do |t|
+#     rand(1..10) do 
+#     end
+# end
 
 
 

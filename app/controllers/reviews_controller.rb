@@ -24,6 +24,7 @@ class ReviewsController < ApplicationController
     {message:'review destroyed'}.to_json
   end
 
+  
   patch '/reviews/:id' do 
     review = Review.find(params[:id])
     review.update(
@@ -32,9 +33,14 @@ class ReviewsController < ApplicationController
     )
     review.to_json
   end
+  
 
-
-
+  delete "/reviews/:id" do
+    review = Review.find(params[:id])
+    review.destroy
+    {message:'review destroyed'}.to_json
+  end
+  
 end
 
 
@@ -89,3 +95,4 @@ end
 
 #   return <form onSubmit={handleSubmit}>{/* controlled form code here*/}</form>;
 # }
+
