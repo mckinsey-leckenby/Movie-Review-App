@@ -37,6 +37,22 @@ class ReviewsController < ApplicationController
 
 end
 
+
+# POST method for front end
+# fetch("http://localhost:9292/reviews", {
+#   method: "POST",
+#   headers: {
+#     "Content-Type": "application/json",
+#   },
+#   body: JSON.stringify({
+#     score: insert score,
+#     comment: "insert comment",
+#     game_id: insert id,
+#     user_id: insert id,
+#   }),
+# });
+
+
 #handle delete for front end
 # const handleDelete = (id) => {
 #   fetch(`http://localhost:9292/reviews/${id}`, {
