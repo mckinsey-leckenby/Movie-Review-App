@@ -45,7 +45,7 @@ end
 #     "Content-Type": "application/json",
 #   },
 #   body: JSON.stringify({
-#     score: insert score,
+#     rating: insert rating,
 #     comment: "insert comment",
 #     game_id: insert id,
 #     user_id: insert id,
