@@ -7,13 +7,21 @@ class ReviewsController < ApplicationController
 
   post '/reviews' do
     review = Review.create(
-      rating: params[:rating],
       comment: params[:comment],
-      show_id: params[:show_id],
-      movie_id: params[:movie_id],
+      rating: params[:rating],
+      movie_id: params[:movie_id]
+      show_id: params[:show_id]
       user_id: params[:user_id]
     )
     review.to_json
+  end
+
+
+
+  delete "/reviews/:id" do
+    review = Review.find(params[:id])
+    review.destroy
+    {message:'review destroyed'}.to_json
   end
 
   
@@ -34,6 +42,23 @@ class ReviewsController < ApplicationController
   end
   
 end
+
+
+# POST method for front end
+# fetch("http://localhost:9292/reviews", {
+#   method: "POST",
+#   headers: {
+#     "Content-Type": "application/json",
+#   },
+#   body: JSON.stringify({
+#     rating: insert rating,
+#     comment: "insert comment",
+#     game_id: insert id,
+#     user_id: insert id,
+#   }),
+# });
+
+
 #handle delete for front end
 # const handleDelete = (id) => {
 #   fetch(`http://localhost:9292/reviews/${id}`, {
@@ -50,7 +75,7 @@ end
 #handle submit to update reviews for movie
 # function EditReviewForm({ review, onUpdateReview }) {
 #   const [comment, setComment] = useState("");
-#   const [rating, setRating] = useState("0");
+#   const [rating, setRating] = useState(0);
 
 #   function handleSubmit(e) {
 #     e.preventDefault();
