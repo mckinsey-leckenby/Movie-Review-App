@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import MovieList from './components/MovieList';
 import MovieListHeading from './components/MovieListHeading';
@@ -13,7 +13,7 @@ const App = () => {
   const [searchValue, setSearchValue] = useState('');
 
   const getMovieRequest = async (searchValue) => {
-    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=2b529191`;
+    const url = `http://localhost:9292/${movies}`;
 
     const response = await fetch(url);
     const responseJson = await response.json();
@@ -30,13 +30,13 @@ const App = () => {
 
   return (
     <div className='djm-movie'>
-        <MovieListHeading heading='Movies' />
-        <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
-        
+      <MovieListHeading heading='Movies' />
+      <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
+
       <div className='row_poster'>
         < MovieList movies={movies} />
       </div>
-      </div>
+    </div>
   );
 }
 
