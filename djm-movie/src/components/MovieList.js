@@ -1,31 +1,20 @@
-import React, { useState } from 'react';
-import StarRating from './StarRating';
+
+import MovieCard from "./MovieCard";
 
 
 
-const MovieList = (props) => {
-    // const [showBack, setShowBack] = useState(false);
 
-    function handleClick() {
-        console.log("CLICK")
-        //   setShowBack(!showBack);
-    }
 
+const MovieList = ({ movies }) => {
+    const everyMovies = movies.map((movie) => {
+        return <MovieCard movies={movie} />
+    })
 
     return (
         <>
-            {props.movies.map((movie, index) => (
-                <div className='d-flex'>
-                    <div className="row_poster">
-                        <div class="hover-container">
-                            
-                                <img src={movie.Poster} alt='movie' onClick={handleClick}></img>
-                                <StarRating />      
-                        </div>
-                    </div>
-                </div>
-
-            ))}
+            <div className="row_poster">
+                {everyMovies}
+            </div>
         </>
     )
 }

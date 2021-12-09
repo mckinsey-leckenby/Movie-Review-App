@@ -1,29 +1,21 @@
 import React from 'react'
+import ShowsCard from './ShowsCard';
 import StarRating from './StarRating';
 
 function ShowList({ shows }) {
-    let everyShows = shows.map((show, index) => {
-        return (
-            < div >
-                <img src={show.img_url}></img>
-                <StarRating />
-                <h3>{show.title}</h3>
-            </div>
-        )
+    const everyShows = shows.map((show) => {
+        return <ShowsCard shows={show} />
     })
 
-    return (
-        <div>
-            <div className='d-flex'>
-                <div className="row_poster">
-                    <div class="hover-container">
-                        {everyShows}
-                    </div>
-                </div>
-            </div>
 
-        </div>
+    return (
+        <>
+            <div className="row_poster">
+                {everyShows}
+            </div>
+        </>
     )
 }
+
 
 export default ShowList

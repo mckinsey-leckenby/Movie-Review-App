@@ -1,42 +1,56 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import MovieList from './components/MovieList';
 import MovieListHeading from './components/MovieListHeading';
-import SearchBox from './components/SearchBox';
-import StarRating from './components/StarRating';
-// import StarRating from './components/StarRating';
+import ShowList from './components/ShowList';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import ShowContent from './components/DisplayMovieContent';
+import Home from './components/Home';
 
 
 const App = () => {
   const [movies, setMovies] = useState([]);
-  const [searchValue, setSearchValue] = useState('');
+  const [shows, setShows] = useState([]);
+  const [clicked, setClicked] = useState(false)
 
-  const getMovieRequest = async (searchValue) => {
-    const url = `http://localhost:9292/${movies}`;
 
-    const response = await fetch(url);
-    const responseJson = await response.json();
-
-    // console.log(responseJson);
-    if (responseJson.Search) {
-      setMovies(responseJson.Search)
-    }
-  }
+  const movies_url = "http://localhost:9292/movies";
+  const shows_url = "http://localhost:9292/shows";
 
   useEffect(() => {
-    getMovieRequest(searchValue);
-  }, [searchValue]);
+    fetch(movies_url).then(r => r.json()).then(setMovies)
+    fetch(shows_url).then(r => r.json()).then(setShows)
+  }, []);
+
+
 
   return (
-    <div className='djm-movie'>
-      <MovieListHeading heading='Movies' />
-      <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
+    <>
+      <div>
+        <MovieListHeading heading='Fresh Potato' />
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/movies">
+              <MovieList movies={movies} />
+            </Route>
+            <Route path="/shows">
+              <ShowList shows={shows} />
+            </Route>
+          </Switch>
+        </Router>
 
-      <div className='row_poster'>
-        < MovieList movies={movies} />
+        {/* <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} /> */}
       </div>
-    </div>
+    </>
   );
 }
 

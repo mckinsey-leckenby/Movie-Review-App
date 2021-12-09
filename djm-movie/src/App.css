@@ -1,36 +1,37 @@
 body {
-	background: #141414;
-	color: #ffffff;
+  background: #141414;
+  color: #ffffff;
 }
 
 .row_poster {
-	display: flex;
-	overflow-y: hidden;
-	overflow-x: scroll;
-	padding: 20px;
+  display: flex;
+  /* flex-direction: row; */
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+.card {
+  color: black;
 }
 
-.row_poster::-webkit-scrollbar{
-	display: none;
+/* .row_poster::-webkit-scrollbar {
+  display: none;
+} */
+img {
+  height: 30em;
 }
-
 
 .hover-container:hover {
-cursor: pointer;
-transform: scale(1.08);
-/* transform: rotate(360deg); */
+  cursor: pointer;
+  transform: scale(1.08);
+  /* transform: rotate(360deg); */
 }
 
-
 input[type="radio"] {
-	display: none;
+  display: none;
 }
 
 .star {
-	cursor: pointer;
-	transition: color 200ms;
+  cursor: pointer;
+  transition: color 200ms;
 }
-
-
-
-	
