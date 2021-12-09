@@ -33,7 +33,7 @@ function Home() {
             <div className='d-flex'>
                 <div className="row_poster">
                     <div class="hover-container">
-                        <img src={show.img_url} alt='movie'></img>
+                        <img src={show.img_url} alt='movie' onClick={() => history.push("/shows")}></img>
                         {/* <StarRating /> */}
                     </div>
                 </div>

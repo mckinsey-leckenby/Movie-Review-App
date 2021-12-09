@@ -7,7 +7,6 @@ import { useHistory } from 'react-router-dom';
 
 
 function ShowsCard({ shows }) {
-    console.log(shows)
     const [showContent, setShowContent] = useState([])
     const [comments, setComments] = useState(shows.reviews)
     const [click, setClick] = useState(false)
