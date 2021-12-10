@@ -24,13 +24,11 @@ body {
 img {
   width: 200px;
   height: 500px;
-  /* object-fit: cover; */
 }
 
 .hover-container:hover {
   cursor: pointer;
   transform: scale(1.08);
-  /* transform: rotate(360deg); */
 }
 
 input[type="radio"] {
