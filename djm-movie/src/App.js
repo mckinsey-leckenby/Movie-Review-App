@@ -16,7 +16,6 @@ const App = () => {
   const [movies, setMovies] = useState([]);
   const [shows, setShows] = useState([]);
 
-
   const movies_url = "http://localhost:9292/movies";
   const shows_url = "http://localhost:9292/shows";
 
