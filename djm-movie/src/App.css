@@ -19,6 +19,12 @@ body {
 }
 .card {
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Card-body h1 {
+  align-items: center;
 }
 
 .hover-container:hover {

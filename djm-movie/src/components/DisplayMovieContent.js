@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom';
+import Button from 'react-bootstrap/Button'
+
 
 function DisplayMovieContent({ movies, comments, setComments }) {
     const [leaveComment, setLeaveComent] = useState(false)
@@ -24,12 +26,12 @@ function DisplayMovieContent({ movies, comments, setComments }) {
                 setComments(comments.filter(r => r.id !== id)))
         window.location.reload(false)
     }
-    const everyComment = movies.reviews.map(item => {
+    const everyComment = comments.map(item => {
         return (
             <ul>
                 <li>{item.comment} <br />movie rating: <strong>{item.rating}</strong> </li>
                 {/* <li>{item.rating}</li> */}
-                <button onClick={e => handleDelete(item.id)}>delete</button>
+                <Button variant="danger" onClick={e => handleDelete(item.id)}>delete</Button>
             </ul>
         )
     })

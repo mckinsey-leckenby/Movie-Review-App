@@ -25,7 +25,7 @@ function DisplayShowContent({ shows, comments, setComments }) {
                 setComments(comments.filter(r => r.id !== id)))
         window.location.reload(false)
     }
-    // console.log(shows.reviews)
+
     const everyComment = shows.reviews.map(item => {
         return (
             <ul>

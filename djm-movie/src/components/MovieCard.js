@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 import StarRating from './StarRating';
 import DisplayMovieContent from "./DisplayMovieContent";
 import { useHistory } from 'react-router-dom';
-
+import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
 
 
 function MovieCard({ movies }) {
@@ -26,13 +27,28 @@ function MovieCard({ movies }) {
 
     return (
         <div>
-            <div className="card">
+            <Card className="mb-2" style={{ width: '35rem', height: "70em", margin: ".25rem" }} bg='dark'>
+                <Card.Img variant="top" src={movies.img_url} alt={movies.title} />
+                <StarRating />
+                <Card.Body className="Card-body" >
+                    <h1 className="h1Center"><strong>{movies.title}</strong></h1>
+
+                    <Card.Subtitle>
+                        <h6>Genre: <strong>{movies.genre}</strong></h6>
+                        <h6>Release year: <strong>{movies.release_year}</strong></h6>
+                    </Card.Subtitle>
+                    <Card.Text>{movies.desc}</Card.Text>
+                    <Button variant="info" onClick={() => handleClick()}>Show Review</Button>
+                </Card.Body>
+            </Card>
+            {/* <div className="card">
                 <img src={movies.img_url} alt={movies.title}></img>
                 <StarRating />
                 <h1>{movies.title}</h1>
                 <button variant="secondary" onClick={() => handleClick()}>Show Review</button>
-            </div>
-            {click && <DisplayMovieContent movies={showContent} comments={comments} setComments={setComments} />}
+            </div>*/
+            }
+            {click && <DisplayMovieContent shows={showContent} comments={comments} setComments={setComments} />}
         </div>
     )
 }
