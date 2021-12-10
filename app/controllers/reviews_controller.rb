@@ -9,8 +9,8 @@ class ReviewsController < ApplicationController
     review = Review.create(
       comment: params[:comment],
       rating: params[:rating],
-      movie_id: params[:movie_id]
-      show_id: params[:show_id]
+      movie_id: params[:movie_id],
+      show_id: params[:show_id],
       user_id: params[:user_id]
     )
     review.to_json

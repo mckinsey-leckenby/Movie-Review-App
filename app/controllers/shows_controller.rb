@@ -2,7 +2,7 @@ class ShowsController < ApplicationController
     
   get "/shows" do
     shows = Show.all
-    shows.to_json
+    shows.to_json(include: :reviews)
   end
 
   get "/shows/:id" do 
