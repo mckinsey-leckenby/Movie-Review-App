@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
     
   get "/movies" do
     movies = Movie.all
-    movies.to_json
+    movies.to_json(include: :reviews)
   end
 
   get "/movies/:id" do 
