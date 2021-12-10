@@ -19,12 +19,6 @@ body {
 }
 .card {
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.Card-body h1 {
-  align-items: center;
 }
 
 .hover-container:hover {
@@ -53,7 +47,13 @@ input[type="radio"] {
   /* align-items: center; */
   justify-content: space-around;
 }
-.movie-or-shows {
-  display: flex;
-  justify-content: space-evenly;
+
+.DJM-logo{
+	display: flex;
+	justify-content: center;
+}
+
+.col{
+	display: flex;
+	justify-content: center;
 }
