@@ -53,3 +53,7 @@ input[type="radio"] {
   /* align-items: center; */
   justify-content: space-around;
 }
+.movie-or-shows {
+  display: flex;
+  justify-content: space-evenly;
+}
