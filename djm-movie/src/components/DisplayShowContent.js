@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom';
+import Button from 'react-bootstrap/Button'
 
 function DisplayShowContent({ shows, comments, setComments }) {
     const [leaveComment, setLeaveComent] = useState(false)
@@ -30,7 +31,7 @@ function DisplayShowContent({ shows, comments, setComments }) {
             <ul>
                 <li>{item.comment} <br />movie rating: <strong>{item.rating}</strong> </li>
                 {/* <li>{item.rating}</li> */}
-                <button onClick={e => handleDelete(item.id)}>delete</button>
+                <Button variant="danger" onClick={e => handleDelete(item.id)}>delete</Button>
             </ul>
         )
     })
@@ -73,7 +74,7 @@ function DisplayShowContent({ shows, comments, setComments }) {
 
 
     return (
-        <div>
+        <div className="comment-card">
             {everyComment}
             <button onClick={handleOnClick}>Leave Comment</button>
             {leaveComment &&

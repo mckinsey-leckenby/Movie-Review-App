@@ -11,14 +11,16 @@ body {
   padding: 20px;
 }
 .card {
-  color: black;
+  color: white;
 }
 
 /* .row_poster::-webkit-scrollbar {
   display: none;
 } */
 img {
-  height: 30em;
+  width: 200px;
+  height: 500px;
+  /* object-fit: cover; */
 }
 
 .hover-container:hover {
@@ -34,4 +36,16 @@ input[type="radio"] {
 .star {
   cursor: pointer;
   transition: color 200ms;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+
+.comment-card {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-around;
 }

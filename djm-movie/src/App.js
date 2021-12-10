@@ -8,9 +8,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
-import ShowContent from './components/DisplayMovieContent';
 import Home from './components/Home';
 
 
