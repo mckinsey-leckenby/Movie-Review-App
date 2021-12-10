@@ -15,7 +15,6 @@ import Home from './components/Home';
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [shows, setShows] = useState([]);
-  const [clicked, setClicked] = useState(false)
 
 
   const movies_url = "http://localhost:9292/movies";

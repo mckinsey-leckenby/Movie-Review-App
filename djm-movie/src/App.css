@@ -11,19 +11,13 @@ body {
   padding: 20px;
 }
 .row_poster img {
-  max-height: 50em;
+  /* height: auto; */
+  height: auto;
+  max-height: 40em;
   width: 30em;
 }
 .card {
   color: white;
-}
-
-/* .row_poster::-webkit-scrollbar {
-  display: none;
-} */
-img {
-  width: 200px;
-  height: 500px;
 }
 
 .hover-container:hover {
