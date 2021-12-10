@@ -9,6 +9,7 @@ body {
   overflow-y: hidden;
   overflow-x: scroll;
   padding: 20px;
+  /* padding-bottom: 300px; */
 }
 .row_poster img {
   /* height: auto; */
@@ -36,6 +37,7 @@ input[type="radio"] {
 .card-body {
   display: flex;
   flex-direction: column;
+  height: auto;
   /* justify-content: center; */
 }
 

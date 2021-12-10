@@ -28,9 +28,9 @@ function ShowsCard({ shows }) {
 
     return (
         <div>
-            <Card className="mb-2" style={{ width: '35rem', height: "65rem", margin: ".25rem" }} bg='dark'>
+            <Card className="mb-2" style={{ width: '35rem', height: "70em", margin: ".25rem" }} bg='dark'>
                 <Card.Img variant="top" src={shows.img_url} alt={shows.title} />
-                <Card.Body className="Card-body">
+                <Card.Body className="Card-body" >
                     <h1 className="h1Center"><strong>{shows.title}</strong></h1>
 
                     <Card.Subtitle>
