@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/mckinsey-leckenby/Movie-Review-App.git/static/css/main.fe784771.chunk.css",
-    "main.js": "/mckinsey-leckenby/Movie-Review-App.git/static/js/main.78a96ac9.chunk.js",
-    "main.js.map": "/mckinsey-leckenby/Movie-Review-App.git/static/js/main.78a96ac9.chunk.js.map",
-    "runtime-main.js": "/mckinsey-leckenby/Movie-Review-App.git/static/js/runtime-main.46aeb597.js",
-    "runtime-main.js.map": "/mckinsey-leckenby/Movie-Review-App.git/static/js/runtime-main.46aeb597.js.map",
-    "static/css/2.0a9ec390.chunk.css": "/mckinsey-leckenby/Movie-Review-App.git/static/css/2.0a9ec390.chunk.css",
-    "static/js/2.00d3f81d.chunk.js": "/mckinsey-leckenby/Movie-Review-App.git/static/js/2.00d3f81d.chunk.js",
-    "static/js/2.00d3f81d.chunk.js.map": "/mckinsey-leckenby/Movie-Review-App.git/static/js/2.00d3f81d.chunk.js.map",
-    "index.html": "/mckinsey-leckenby/Movie-Review-App.git/index.html",
-    "static/css/2.0a9ec390.chunk.css.map": "/mckinsey-leckenby/Movie-Review-App.git/static/css/2.0a9ec390.chunk.css.map",
-    "static/css/main.fe784771.chunk.css.map": "/mckinsey-leckenby/Movie-Review-App.git/static/css/main.fe784771.chunk.css.map",
-    "static/js/2.00d3f81d.chunk.js.LICENSE.txt": "/mckinsey-leckenby/Movie-Review-App.git/static/js/2.00d3f81d.chunk.js.LICENSE.txt"
+    "main.css": "/mckinsey-leckenby/github.io/djm-movie/static/css/main.fe784771.chunk.css",
+    "main.js": "/mckinsey-leckenby/github.io/djm-movie/static/js/main.78a96ac9.chunk.js",
+    "main.js.map": "/mckinsey-leckenby/github.io/djm-movie/static/js/main.78a96ac9.chunk.js.map",
+    "runtime-main.js": "/mckinsey-leckenby/github.io/djm-movie/static/js/runtime-main.05ab51df.js",
+    "runtime-main.js.map": "/mckinsey-leckenby/github.io/djm-movie/static/js/runtime-main.05ab51df.js.map",
+    "static/css/2.0a9ec390.chunk.css": "/mckinsey-leckenby/github.io/djm-movie/static/css/2.0a9ec390.chunk.css",
+    "static/js/2.00d3f81d.chunk.js": "/mckinsey-leckenby/github.io/djm-movie/static/js/2.00d3f81d.chunk.js",
+    "static/js/2.00d3f81d.chunk.js.map": "/mckinsey-leckenby/github.io/djm-movie/static/js/2.00d3f81d.chunk.js.map",
+    "index.html": "/mckinsey-leckenby/github.io/djm-movie/index.html",
+    "static/css/2.0a9ec390.chunk.css.map": "/mckinsey-leckenby/github.io/djm-movie/static/css/2.0a9ec390.chunk.css.map",
+    "static/css/main.fe784771.chunk.css.map": "/mckinsey-leckenby/github.io/djm-movie/static/css/main.fe784771.chunk.css.map",
+    "static/js/2.00d3f81d.chunk.js.LICENSE.txt": "/mckinsey-leckenby/github.io/djm-movie/static/js/2.00d3f81d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.46aeb597.js",
+    "static/js/runtime-main.05ab51df.js",
     "static/css/2.0a9ec390.chunk.css",
     "static/js/2.00d3f81d.chunk.js",
     "static/css/main.fe784771.chunk.css",
